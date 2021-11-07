@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 
 class RoleController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware(['auth']);
+    }
+
     //
     public function create(Request $request)
     {
@@ -22,7 +27,7 @@ class RoleController extends Controller
 
     public function index()
     {
-        return Role::whereNotNull('created_at')->get();
+        return Role::get();
     }
 
     public function show(Role $role)

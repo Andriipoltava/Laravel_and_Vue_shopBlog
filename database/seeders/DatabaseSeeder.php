@@ -22,11 +22,11 @@ class DatabaseSeeder extends Seeder
 
 //        User::factory(1)->admin()->create();
 
-        Ticket::factory()->create();
-        User::factory(1)
-            ->admin()
-            ->has(Ticket::factory(1)->count(3))
-            ->create();
-        User::factory(5)->client()->create();;
+//        Ticket::factory()->create();
+//        User::factory(1)
+//            ->admin()
+//            ->has(Ticket::factory(1)->count(3))
+//            ->create();
+//        User::factory(5)->client()->create();;
     }
 }
